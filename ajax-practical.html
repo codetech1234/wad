@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admission Form</title>
+<link rel="stylesheet" href="resform.css">
+</head>
+<body>
+<form id="admissionForm" action="adm1.php" method="post">
+<h2>STUDENT ENQUIRY FORM</h2><hr>
+<fieldset>
+<legend>NAME</legend>
+<div id="x">
+<label>First Name</label>&nbsp; &nbsp;
+<input type="text" class="input" name="fname" placeholder="Enter first name" 
+maxlength="20" required>
+</div> 
+<br>
+<div id="x">
+<label>Last Name</label>&nbsp; &nbsp;
+<input type="text" class="input" name="lname" placeholder="Enter last name" 
+maxlength="20" required>
+</div> 
+</fieldse> <br>
+<fieldset>
+<legend>PERSONAL INFORMATION</legend>
+<div id="x">
+<label>Gender</label>&nbsp; &nbsp;
+<input type="radio" name="gender" value="Male" required>Male
+<input type="radio" name="gender" value="Female" required>Female
+</div> <br>
+<div id="p">
+<label>Date of Birth</label>&nbsp; &nbsp;
+<input type="date" name="dob" required>
+</div> <br>
+</fieldset> <br>
+<fieldset>
+<legend>CONTACT AND ADDRESS DETAILS</legend>
+<div id="x">
+<label>Email</label>&nbsp; 
+<input type="email" class="input" name="email" placeholder="Enter your email" required>
+</div><br>
+<div id="x">
+<label>Phone Number</label>&nbsp; &nbsp;
+<input type="tel" class="input" name="phoneno" maxlength="10" placeholder="Enter your 
+phone number" pattern="[7-9]{1}[0-9]{9}" required title="Please enter valid phone number">
+</div>
+<br>
+<div id="x">
+<label>Address</label>&nbsp; &nbsp;
+<textarea name="address" cols="40" rows="2" placeholder="Enter your address" 
+maxlength="100" required></textarea>
+</div>
+</fieldset> <br>
+<fieldset>
+<legend>COURSE INFORMATION</legend>
+<div id="x">
+<label>Select Domain:</label><br>
+<select name="Domain" required>
+<option value="">Select a domain</option>
+<option>Programming</option>
+<option>Finance and Accounting</option>
+<option>Graphics Designing</option>
+<option>Engineering Designing</option>
+</select>
+</div> <br>
+<div id="x">
+<label>Type of course</label><br>
+<input type="radio" name="Type_course" value="Modular" required> Modular <br>
+<input type="radio" name="Type_course" value="Diploma" required> Diploma 
+</div> <br>
+<div id="x">
+<label>Course Name</label>
+<input type="text" class="input" name="course" placeholder="Enter course name" 
+maxlength="50" required>
+</div> <br>
+<div id="x">
+<label for="Batch">Preferred Batch</label>
+<input type="checkbox" id="x" name="batch" value="Morning">&nbsp; Morning &nbsp;
+<input type="checkbox" id="x" name="batch" value="Afternoon">&nbsp;Afternoon &nbsp;
+<input type="checkbox" id="x" name="batch" value="Evening">&nbsp; Evening &nbsp;
+</div>
+</fieldset> <br>
+<div id="y">
+<button type="submit">Register</button>
+<button type="reset">Reset</button>
+</div>
+</form>
+<script>
+// JavaScript function to handle form submission and show collected data
+document.getElementById('admissionForm').addEventListener('submit', function (event) {
+event.preventDefault(); // Prevent the form from submitting immediately
+const formData = new FormData(this);
+let formValues = '';
+formData.forEach((value, key) => {
+formValues += `${key}: ${value}\n`;
+});
+alert('Form Data Submitted:\n\n' + formValues);
+/*
+fetch('adm1.php', {
+method: 'POST',
+body: formData
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));
+*/
+});
+</script>
+</body>
+</html>
