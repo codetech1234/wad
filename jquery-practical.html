@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Mobile Site</title>
+
+    <!-- jQuery Mobile CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+    <!-- jQuery Mobile JS -->
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+<!-- PAGE 1: HOME -->
+<div data-role="page" id="home">
+
+    <div data-role="header">
+        <h1>Home</h1>
+    </div>
+
+    <div role="main" class="ui-content">
+        <h2>Welcome to My Mobile Website</h2>
+        <p>This is a simple jQuery Mobile page.</p>
+
+        <a href="#about" class="ui-btn ui-btn-b">Go to About</a>
+        <a href="#contact" class="ui-btn ui-btn-a">Contact Us</a>
+    </div>
+
+    <div data-role="footer">
+        <h4>Footer</h4>
+    </div>
+
+</div>
+
+<!-- PAGE 2: ABOUT -->
+<div data-role="page" id="about">
+
+    <div data-role="header">
+        <h1>About</h1>
+        <a href="#home" class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-notext"></a>
+    </div>
+
+    <div role="main" class="ui-content">
+        <h2>About Page</h2>
+        <p>This page explains the website.</p>
+    </div>
+
+    <div data-role="footer">
+        <h4>Footer</h4>
+    </div>
+
+</div>
+
+<!-- PAGE 3: CONTACT -->
+<div data-role="page" id="contact">
+
+    <div data-role="header">
+        <h1>Contact</h1>
+        <a href="#home" class="ui-btn ui-btn-left ui-icon-home ui-btn-icon-notext"></a>
+    </div>
+
+    <div role="main" class="ui-content">
+        <h2>Contact Us</h2>
+
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email">
+
+            <label for="msg">Message:</label>
+            <textarea id="msg"></textarea>
+
+            <input type="submit" value="Send" class="ui-btn ui-btn-b">
+        </form>
+    </div>
+
+    <div data-role="footer">
+        <h4>Footer</h4>
+    </div>
+
+</div>
+
+</body>
+</html>
